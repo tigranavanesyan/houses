@@ -1,0 +1,49 @@
+@import url(./header.css);
+:root{
+    --primary: #FFA500;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hide{
+    display: none;
+}
+.container_main{
+    background-color: aquamarine;/*--------------------------------------------------------*/
+    position: relative;
+
+}
+.wraper_form{
+    position: absolute;
+    width: 927px;
+    height: 945px;
+    right: 0;
+    top: 30px;
+    
+    background: #FBFBFB;
+    border-radius: 0px;
+}
+
+
+.action{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.action-svg_fream{
+    width: 34px;
+    height: 35px;
+    
+    background: #FFFFFF;
+}
+.action-svg_fream svg{
+    width: 20px;
+    height: 20px;
+}
+
+.bgcol{
+
+}
