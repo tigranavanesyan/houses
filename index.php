@@ -136,8 +136,8 @@
                     <input type="text" name="name" >
                     <b>Area</b>
                     <input type="text" name="area" >
-                    <b>Date</b>
-                    <input type="date" name="date" >
+                    <!-- <b>Date</b>
+                    <input type="date" name="date" > -->
                     <b>Archive</b>
                     <input type="text" name="archive" >
                     <b>Date</b>
@@ -146,7 +146,7 @@
                 </form>
 
                 <form action="action/delite.php" method="post">
-                    <input type="number" name="id">
+                    <input type="text" name="id">
                     <button type="submit">del</button>
                 </form>
 
