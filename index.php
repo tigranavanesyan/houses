@@ -1,3 +1,7 @@
+<?php
+    require_once 'config/connect.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,10 +102,8 @@
                         </div>
                     </div>
                 </div>
-
             </nav>
         </div>
-
     </header>
     <main>
         <div class="container container_main">
@@ -129,9 +131,56 @@
                     </div>
                 </div>
 
+                <form action="action/create.php" method="post" class="form">
+                    <b>Name</b>
+                    <input type="text" name="name" >
+                    <b>Area</b>
+                    <input type="text" name="area" >
+                    <b>Date</b>
+                    <input type="date" name="date" >
+                    <b>Archive</b>
+                    <input type="text" name="archive" >
+                    <b>Date</b>
+                    <input type="text" name="name888" >
+                    <button type="submit">avelacnel</button>
+                </form>
+
+                <form action="action/delite.php" method="post">
+                    <input type="number" name="id">
+                    <button type="submit">del</button>
+                </form>
+
+
 
             </div>
             <div class="wtaper_db">
+                <table>
+                    <tr>
+                        <th>radiobtn</th>
+                        <th>id</th>
+                        <th>Name</th>
+                        <th>Area</th>
+                        <th>Date</th>
+                        <th>Archive</th>
+                    </tr>
+                    <?php
+                        $data = mysqli_query($connect, "SELECT * FROM `housesdb`");
+                        $data = mysqli_fetch_all($data);
+                        foreach($data as $datarow) {
+                    ?>
+                        
+                    <tr>
+                        <td><?= $datarow[0] ?></td>
+                        <td><?= $datarow[1] ?></td>
+                        <td><?= $datarow[2] ?></td>
+                        <td><?= $datarow[3] ?></td>
+                        <td><?= $datarow[4] ?></td>
+                        <td><?= $datarow[5] ?></td>
+                    </tr>
+                  <?php
+                        }
+                  ?>
+                </table>
                 
             </div>
         </div>
