@@ -9,6 +9,6 @@ $date = $_POST['date'];
 $archive = $_POST['archive'];
 $name888 = $_POST['name888'];
 
-mysqli_query($connect, "INSERT INTO `housesdb` (`id`, `name`, `area`, `data`, `gassurcharge`, `description`) VALUES (NULL, '$name', '$area', '$date', '$archive', '$name888')");
+mysqli_query($connect, "INSERT INTO `housesdb` (`id`, `name`, `area`, `data`, `gassurcharge`, `description`) VALUES (NULL, '$name', '$area', NULL, '$archive', '$name888')");
 
 header('Location: /');
