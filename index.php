@@ -136,8 +136,8 @@
                     <input type="text" name="name" >
                     <b>Area</b>
                     <input type="text" name="area" >
-                    <!-- <b>Date</b>
-                    <input type="date" name="date" > -->
+                    <b>Date</b>
+                    <input type="date" name="date" >
                     <b>Archive</b>
                     <input type="text" name="archive" >
                     <b>Date</b>
