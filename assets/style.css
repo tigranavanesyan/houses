@@ -1,6 +1,8 @@
 @import url(./header.css);
+@import url(./form.css);
 :root{
     --primary: #FFA500;
+    --secondary: #808080;
 }
 
 *{
@@ -8,65 +10,277 @@
     padding: 0;
     box-sizing: border-box;
 }
+svg{
+    padding: 0;
+}
+body{
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #363853;
+}
 .hide{
     display: none;
 }
 .container_main{
-    background-color: aquamarine;/*--------------------------------------------------------*/
     position: relative;
-
 }
 .wraper_form{
     position: absolute;
     width: 927px;
-    height: 945px;
     right: 0;
     top: 30px;
-    width: 300px;
-    
-    background: #FBFBFB;
     border-radius: 0px;
 }
 
-
-.action{
+.wraper_db{
     display: flex;
-    justify-content: end;
-    align-items: center;
-    height: 10px;/*///////////////////////////////////////////////////////////////*/
-}
-.action-svg_fream{
-    width: 34px;
-    height: 35px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0px;
+
+    
+    position: absolute;
+    width: 389px;
+    height: 885px;
+    left: 4px;
+    top: 60px;
     
     background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
 }
-.action-svg_fream svg{
+.wraper_table{
+    width: 100%;
+    height: 780px;
+    position: relative;
+}
+.relativ{
+    position: relative;
+    width: 100%;
+}
+.db_action{
+    position: absolute;
+    width: 42px;
+    top: 68px;
+    right: -40px;
+
+}
+.db_action-svg{
+    display: flex;
+    height: 31px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+.db_action-svg:hover{
+    background: #ECECEC;
+}
+.db_action-svg.svg_active{
+    background: #FFA500 !important;
+
+}
+.svg_active .svg_db-action svg{
+    color: #F5F5F5;
+}
+.svg_db-action{
     width: 20px;
     height: 20px;
 }
-
-.bgcol{
-
+.svg_db-action svg{
+    width: 20px;
+    height: 20px;
 }
-.form{
-    display: flex;
-    flex-direction: column;
-}
-input{
-    margin-bottom: 20px;
+.wraper_table h2{
+    font-size: 18px;
+    line-height: 24px;
+    padding-bottom: 10px;
+    padding-left: 13px;
+    color: #363853;
 }
 
-.wtaper_db{
+
+
+table{
+    width: 100%;
+    height: 750px;
+}
+.mb-content{
+    margin-right: -50px !important;
+}
+.mb-track-y {
+    background: white;
+}
+.sticky{
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 5;
+}
+.sticky2{
+    position: sticky;
+    top: 31px;
+    background: #363853;
+    z-index: 5;
+    margin-bottom: 2px;
+}
+.mb-track-y {
+    top: 70px;
+}
+thead{
+
+    padding: 5px 20px;
+
+    background: #363853;
+}
+thead tr th{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #F5F5F5;
+    height: 31px;
+}
+tbody{
+    background: #363853;
+}
+tbody tr:first-child{
+    padding-left: 2px;
+}
+tbody tr td{
+
+    align-items: stretch;
+    font-size: 13px;
+    line-height: 17px;
+
+    text-transform: uppercase;
+    color: black;
+}
+tbody tr{
+    background: #F5F5F5;
+    border-bottom: 1px solid black;
+}
+.checked-row{
+    background: var(--primary);
+}
+
+th, td {
+    position: relative;
+}
+th:not(:first-child):before{ 
+    content: " ";
+    background: white;
+    width: 1px;
+    height: 20px;
+    top: 5px;
+    left: 0px;
     position: absolute;
-    top: 100px;
-    left: 0;
-    background-color: blueviolet;
-    border: 1px solid black;
 }
-th, td{
-    border: 1px solid black;
+tr td:not(:first-child):before{ 
+    content: " ";
+    background: #ECECEC;
+    width: 1px;
+    height: 20px;
+    top: 5px;
+    left: 0px;
+    position: absolute;
+  }
+tr:hover  td:before{ 
+    background: #808080;
+  }
+.checked-row  td:not(:first-child):before{
+    background: #EB9800;
+    outline: 0px;
+  }
+tr:not(:first-child):hover{
+    background: #ECECEC;
 }
-svg{
+tr:hover .fake.db{
+    border-color: black;
+}
+tr.checked-row:hover .fake.db{
+    border-color: var(--primary);
+}
+.fake.db::after {
+    outline: 0px;
+}
+td{
+    font-size: 13px;
+    line-height: 17px;
+    text-align: center;
+}
+td  .fake{
+    width: 20px;
+    height: 20px;
+    margin: 4px;
+}
+tr{
+    border-bottom: 1px solid white;
+    width: 100%;
+}
+.widddth{
+    width: 100%;
+}
+table, tr, td, th{
+    border-collapse: collapse;
+}
+tbody tr{
+
+    padding: 5px 20px;
+    gap: 10px;
+    height: 30px;
+
+    background: #F5F5F5;
+}
+tbody tr{
+    border-bottom: 1px solid white;
+}
+td{
     max-width: 50px;
+    overflow: hidden;
+}
+.wraper_table table{
+    border: none;
+}
+.fake.db{
+    width: 20px;
+    height: 20px;
+    margin-top: 6px;
+    margin-left: -8px;
+}
+span{
+    vertical-align: middle;
+}
+.svg_db{
+    width: 50px;
+    height: 50px;
+}
+.db_bottom{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    padding-right: 17px;
+    justify-content: end;
+    gap: 15px;
+    margin-top: 15px;
+}
+.db_svg_freame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F5F5;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.svg_db{
+    width: 23px;
+    height: 24px;
+}
+.bg_color{
+    background-color: var(--primary);
 }
